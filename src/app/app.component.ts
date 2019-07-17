@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     
             {
 
-                selector: 'app-root',
+                selector: 'mw-app',
 
                 template: '<h1>My App</h1>'
 

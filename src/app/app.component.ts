@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 
                 selector: 'mw-app',
 
-                template: '<h1>My App</h1>'
+                templateUrl: './app.component.html'
 
             }
         

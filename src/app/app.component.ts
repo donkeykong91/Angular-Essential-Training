@@ -11,6 +11,14 @@ import { Component } from '@angular/core';
                 styles: [`
 
                     h1 { color: #ffffff; }
+
+                    .description {
+
+                        font-style: italic;
+
+                        color: green;
+
+                    }
                 
                 `]
 

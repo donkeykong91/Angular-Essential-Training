@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
 
                 selector: 'mw-app',
 
-                templateUrl: './app.component.html'
+                templateUrl: './app.component.html',
+
+                styles: [`
+
+                    h1 { color: #ffffff; }
+                
+                `]
 
             }
         

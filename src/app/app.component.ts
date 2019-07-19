@@ -8,19 +8,7 @@ import { Component } from '@angular/core';
 
                 templateUrl: './app.component.html',
 
-                styles: [`
-
-                    h1 { color: #ffffff; }
-
-                    .description {
-
-                        font-style: italic;
-
-                        color: green;
-
-                    }
-                
-                `]
+                styleUrls: ['./app.component.css']
 
             }
         

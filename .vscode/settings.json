@@ -1,5 +1,6 @@
 {
   "files.exclude": {
     "**/node_modules": {}
-  }
+  },
+  "workbench.editor.showTabs": true
 }

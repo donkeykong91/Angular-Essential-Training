@@ -31,6 +31,9 @@
     <li>
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year"/>
+      <div *ngIf="form.get('year').hasError('year')" class="error">
+        Must be between 1900 and 2100
+      </div>
     </li>
   </ul>
   <button type="submit" [disabled]="!form.valid">Save</button>

@@ -28,6 +28,9 @@
     <li>
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year"/>
+      <div *ngIf="form.get('name').hasError('pattern')" class="error">
+        Name has invalid characters
+      </div>
     </li>
   </ul>
   <button type="submit" [disabled]="!form.valid">Save</button>

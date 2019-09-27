@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: "mw-media-item-form",
@@ -8,6 +8,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class MediaItemFormComponent implements OnInit {
   form: FormGroup;
+
+  constructor(formBuilder: FormBuilder){}
 
   ngOnInit() {
     this.form = new FormGroup({

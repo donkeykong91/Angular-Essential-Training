@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms"
 export class MediaItemFormComponent implements OnInit {
   form: FormGroup;
 
-  constructor(formBuilder: FormBuilder){}
+  constructor(private formBuilder: FormBuilder){}
 
   ngOnInit() {
     this.form = new FormGroup({

@@ -7,6 +7,7 @@ import { FavoriteDirective } from "./favorite.directive";
 import { CategoryListPipe } from "./category-list.pipe";
 import { ReactiveFormsModule } from '@angular/forms';
 import { MediaItemFormComponent } from './media-item-form.component';
+import { MediaItemService } from './media-item.service';
 
 @NgModule({
   imports: [
@@ -21,6 +22,9 @@ import { MediaItemFormComponent } from './media-item-form.component';
     CategoryListPipe,
     MediaItemFormComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    MediaItemService
+  ]
 })
 export class AppModule {}

@@ -46,4 +46,13 @@ export class MediaItemService {
           isFavorite: false
         }
       ];
+
+      get() { return this.mediaItems; }
+
+      add(mediaItem) { this.mediaItems.push(mediaItem); }
+
+      delete(mediaItem) {
+          const index = this.mediaItems.indexOf(mediaItem);
+          if (index >= 0) this.mediaItems.splice(index, 1);
+      }
 }

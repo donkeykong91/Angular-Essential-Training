@@ -17,7 +17,8 @@ export class MediaItemFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private mediaItemService: MediaItemService
+    private mediaItemService: MediaItemService,
+    @Inject('lookupListToken') public lookupLists
   ) {}
 
   ngOnInit() {

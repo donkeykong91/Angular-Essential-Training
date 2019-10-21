@@ -25,6 +25,9 @@ const lookupLists = {
     CategoryListPipe,
     MediaItemFormComponent
   ],
+  providers: [
+    { provide: 'lookupListToken', useValue: lookupLists}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

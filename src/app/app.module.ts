@@ -8,9 +8,7 @@ import { CategoryListPipe } from "./category-list.pipe";
 import { ReactiveFormsModule } from '@angular/forms';
 import { MediaItemFormComponent } from './media-item-form.component';
 
-const lookupLists = {
-  mediums: ['Movies', 'Series']
-}
+
 
 @NgModule({
   imports: [

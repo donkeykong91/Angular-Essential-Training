@@ -73,3 +73,17 @@ export class MediaItemService {
     if (index >= 0) this.mediaItems.splice(index, 1);
   }
 }
+
+interface MediaItem{
+  id: number;
+  name: string;
+  medium: string;
+  category: string;
+  year: number;
+  watchedOn: number;
+  isFavorite: boolean;
+}
+
+interface MediaItemResponse{
+  mediaItems: MediaItem[];
+}

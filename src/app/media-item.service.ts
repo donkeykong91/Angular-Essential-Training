@@ -57,7 +57,7 @@ export class MediaItemService {
   constructor(private http: HttpClient) {}
 
   get() {
-    return this.http.get("mediaitems").pipe(
+    return this.http.get<MediaItemResponse>("mediaitems").pipe(
       map(function(response) {
         return response.mediaItems;
       })

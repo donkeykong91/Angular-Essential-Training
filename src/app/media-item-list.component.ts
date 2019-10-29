@@ -12,7 +12,7 @@ export class MediaItemListComponent implements OnInit {
   constructor(private mediaItemService: MediaItemService) {}
 
   ngOnInit() {
-    this.mediaItems = this.mediaItemService
+    this.mediaItemService
       .get()
       .subscribe(mediaItems => (this.mediaItems = mediaItems));
   }

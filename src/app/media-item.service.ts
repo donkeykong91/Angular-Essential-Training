@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { map, catchError } from "rxjs/operators";
-import { throwError } from 'rxjs';
+import { throwError } from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -22,11 +22,15 @@ export class MediaItemService {
   }
 
   add(mediaItem) {
-    return this.http.post('mediaItems', mediaItem);
+    return this.http
+      .post("mediaItems", mediaItem)
+      .pipe(catchError(this.handleError));
   }
 
   delete(mediaItem) {
-    return this.http.delete(`mediaItems/${mediaItem.id}`);
+    return this.http
+      .delete(`mediaItems/${mediaItem.id}`)
+      .pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse) {

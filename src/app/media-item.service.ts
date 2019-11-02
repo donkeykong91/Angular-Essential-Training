@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { map, catchError } from "rxjs/operators";
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
@@ -15,7 +16,8 @@ export class MediaItemService {
     return this.http.get<MediaItemResponse>("mediaitems", getOptions).pipe(
       map(function(response) {
         return response.mediaItems;
-      })
+      }),
+      catchError(this.handleError)
     );
   }
 
@@ -25,6 +27,11 @@ export class MediaItemService {
 
   delete(mediaItem) {
     return this.http.delete(`mediaItems/${mediaItem.id}`);
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    console.log(error.message);
+    return throwError("a data error occurred, please try again");
   }
 }
 

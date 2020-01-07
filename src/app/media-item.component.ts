@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./media-item.component.css']
 })
 export class MediaItemComponent {
-  mediaItem
+  @Input() mediaItem
 }
